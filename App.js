@@ -1,7 +1,17 @@
-import { View, Pressable, Text, StyleSheet } from 'react-native';
+/*
+* Apartado 7.
+* Implementa las instrucciones necesarias para que el cuadrado realice los mismos cambios 
+* que en el ejercicio anterior –en color y tamaño-, pero esta vez aumentando de tamaño 
+* en lugar de disminuyendo. Cuando llegue a un tamaño de tu elección –por ejemplo, el ancho 
+* de la pantalla-, dejará de agrandarse y se mantendrá en ese valor.
+*/
+import { View, Pressable, Text, StyleSheet, Dimensions } from 'react-native';
 import { useState } from 'react';
 
 export default function App() {
+
+  const {width: screenWidth} = Dimensions.get('window');
+  const maxWidth = screenWidth * 0.9;
 
   const [backColor, setBackColor] = useState('green');
   const [squareColor, setSquareColor] = useState('yellow');
@@ -12,13 +22,13 @@ export default function App() {
     if (backColor === 'yellow') {
       setBackColor('green');
       setSquareColor('yellow');
-      setWidth(width/1.2);
-      setHeight(height/1.2);
     } else {
       setBackColor('yellow');
       setSquareColor('green');
-      setWidth(width/1.2);
-      setHeight(height/1.2);
+    }
+    if(width < maxWidth){
+      setWidth(width*1.05);
+      setHeight(height*1.05);
     }
   }
 
