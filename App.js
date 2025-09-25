@@ -1,9 +1,11 @@
 /*
-* Apartado 8.
-* Implementa las instrucciones necesarias para que el cuadrado realice los mismos 
-* cambios que en el ejercicio anterior, pero esta vez cuando llegue a ocupar el 
-* tamaño que elijas –por ejemplo, el ancho de la pantalla-, 
-* volverá al tamaño inicial y empezará a aumentar otra vez hasta llegar al tamaño límite fijado.
+* Apartado 9.
+* Implementa las instrucciones necesarias para que el cuadrado realice 
+* los mismos cambios que en el ejercicio anterior, pero esta vez cuando 
+* llegue al tamaño que elijas –el ancho de la pantalla, por ejemplo-, 
+* irá reduciendo el tamaño hasta llegar al de inicio, donde empezará a 
+* aumentar otra vez hasta llegar al tamaño límite fijado. 
+* Y así sucesivamente según el usuario vaya pulsando el componente Pressable.
 */
 import { View, Pressable, Text, StyleSheet, Dimensions } from 'react-native';
 import { useState } from 'react';
@@ -17,6 +19,7 @@ export default function App() {
   const [squareColor, setSquareColor] = useState('yellow');
   const [width, setWidth] = useState(200);
   const [height, setHeight] = useState(200);
+  const [flag, setFlag] = useState(false);
 
   function handleOnPress() {
     if (backColor === 'yellow') {
@@ -26,12 +29,18 @@ export default function App() {
       setBackColor('yellow');
       setSquareColor('green');
     }
-    if(width <= maxWidth){
-      setWidth(width*1.05);
-      setHeight(height*1.05);
-    }else if(width >= maxWidth){
-      setHeight(200);
-      setWidth(200);
+
+    if(width <= 200)
+      setFlag(false);
+    else if(width >= maxWidth)
+      setFlag(true);
+    
+    if(!flag && (width <= 200 || width <= maxWidth)){
+      setWidth(width*1.1);
+      setHeight(height*1.1);
+    }else if(flag){
+      setWidth(width/1.1);
+      setHeight(height/1.1);
     }
   }
 
