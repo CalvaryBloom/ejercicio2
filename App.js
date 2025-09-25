@@ -1,10 +1,21 @@
 import { View, Pressable, Text, Image, StyleSheet } from 'react-native';
+import { useState } from 'react';
 export default function App() {
+
+  const [color, setColor] = useState('yellow');
+
+  function handleOnPress(){
+    if (color === 'blue')
+      setColor('green');
+    else
+      setColor('blue');
+  }
+
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, {backgroundColor: color}]}>
       <Text style={styles.title}>My Title</Text>
       <Image style={styles.image} source={require('./assets/snack-icon.png')} />
-      <Pressable>
+      <Pressable onPress={() => handleOnPress()}>
         <Text style={styles.text}>Púlsame!</Text>
       </Pressable>
     </View>);
