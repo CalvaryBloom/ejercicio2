@@ -12,13 +12,13 @@ export default function App() {
     if (backColor === 'yellow') {
       setBackColor('green');
       setSquareColor('yellow');
-      setWidth(200);
-      setHeight(200);
+      setWidth(width/1.2);
+      setHeight(height/1.2);
     } else {
       setBackColor('yellow');
       setSquareColor('green');
-      setWidth(300);
-      setHeight(100);
+      setWidth(width/1.2);
+      setHeight(height/1.2);
     }
   }
 
