@@ -3,17 +3,21 @@ import { useState } from 'react';
 export default function App() {
 
   const [color, setColor] = useState('green');
+  const [text, setText] = useState('My Title');
 
   function handleOnPress(){
-    if (color === 'blue')
+    if (color === 'yellow'){
       setColor('green');
-    else
-      setColor('blue');
+      setText('My Title');
+    }else{
+      setColor('yellow');
+      setText('My New Title');
+    }
   }
 
   return (
     <View style={[styles.container, {backgroundColor: color}]}>
-      <Text style={styles.title}>My Title</Text>
+      <Text style={styles.title}>{text}</Text>
       <Image style={styles.image} source={require('./assets/snack-icon.png')} />
       <Pressable onPress={() => handleOnPress()}>
         <Text style={styles.text}>Púlsame!</Text>
