@@ -5,16 +5,11 @@
 ### 🎯 Objetivos
 Aprender a implementar eventos con `onPress` y `Pressable` en React Native, utilizando `useState` para manejar el estado de los componentes.
 
-### ⏱️ Temporalización
-**Dedicación estimada:** 2 horas
-
 ---
 
 ## 📋 Descripción General
 
 En este bloque de actividades prácticas aprenderemos a implementar el evento `onPress` en el componente 'core' `Pressable`. Para ello actualizaremos los distintos estados necesarios para realizar cada ejercicio mediante `useState`.
-
-> **💡 NOTA:** Si tienes dudas sobre qué debes implementar en cada ejercicio, puedes consultar el video explicativo subido a Florida Oberta.
 
 ---
 
@@ -203,6 +198,5 @@ Implementa el Ejercicio 9 añadiendo:
 
 ## 🎓 Recursos Adicionales
 
-- Consulta el video explicativo en Florida Oberta para dudas específicas
 - Documentación oficial de React Native: [https://reactnative.dev/](https://reactnative.dev/)
 - Guía de `useState`: [https://react.dev/reference/react/useState](https://react.dev/reference/react/useState)
