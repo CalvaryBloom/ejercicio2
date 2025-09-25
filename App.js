@@ -1,11 +1,9 @@
 /*
-* Apartado 9.
-* Implementa las instrucciones necesarias para que el cuadrado realice 
-* los mismos cambios que en el ejercicio anterior, pero esta vez cuando 
-* llegue al tamaño que elijas –el ancho de la pantalla, por ejemplo-, 
-* irá reduciendo el tamaño hasta llegar al de inicio, donde empezará a 
-* aumentar otra vez hasta llegar al tamaño límite fijado. 
-* Y así sucesivamente según el usuario vaya pulsando el componente Pressable.
+* Apartado 10.
+* Implementa las instrucciones necesarias para que, en el ejercicio anterior, 
+* cada vez que el usuario pulse sobre el componente Pressable, además de los 
+* cambios indicados, se cambie el color del fondo de la pantalla. Los valores 
+* para este color cambiarán entre blanco y negro.
 */
 import { View, Pressable, Text, StyleSheet, Dimensions } from 'react-native';
 import { useState } from 'react';
@@ -22,11 +20,11 @@ export default function App() {
   const [flag, setFlag] = useState(false);
 
   function handleOnPress() {
-    if (backColor === 'yellow') {
-      setBackColor('green');
+    if (backColor === 'white') {
+      setBackColor('black');
       setSquareColor('yellow');
     } else {
-      setBackColor('yellow');
+      setBackColor('white');
       setSquareColor('green');
     }
 
