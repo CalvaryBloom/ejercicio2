@@ -2,7 +2,7 @@ import { View, Pressable, Text, Image, StyleSheet } from 'react-native';
 import { useState } from 'react';
 export default function App() {
 
-  const [color, setColor] = useState('yellow');
+  const [color, setColor] = useState('green');
 
   function handleOnPress(){
     if (color === 'blue')
