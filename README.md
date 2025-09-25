@@ -1,4 +1,4 @@
-# Actividades onPress y useState en React Native - Ejercicio 2
+# Actividades onPress y useState en React Native - Ejercicio 2.
 
 ## 📱 Programación Multimedia y de Dispositivos Móviles - BLOQUE 1
 
