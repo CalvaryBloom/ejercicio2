@@ -3,7 +3,7 @@
 * AUTOR: BORJA PARDO JUANES
 * FECHA: 25/08/2025 
 *
-* Apartado 10
+* Apartado 10:
 * Implementa las instrucciones necesarias para que, en el ejercicio anterior, 
 * cada vez que el usuario pulse sobre el componente Pressable, además de los 
 * cambios indicados, se cambie el color del fondo de la pantalla. Los valores 
